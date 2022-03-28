@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Travel Approval</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Travel Approvals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+        <relationshipLabel><!-- Travel Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Destination State --></label>
+        <name>Destination_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- There is no automation to check this box at the moment.  If you are traveling out-of-state, relative to your home/work state, check this box. --></help>
+        <label><!-- Out-of-State --></label>
+        <name>Out_of_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purpose of Trip --></label>
+        <name>Purpose_of_Trip__c</name>
+    </fields>
+    <fields>
+        <help><!-- Approved = thumbs up
+Rejected = thumbs down
+All others = gear in progress --></help>
+        <label><!-- Status Indicator --></label>
+        <name>Status_Indicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This is a RUS field and it sums all Expense Amounts tied to each individual Travel Approval record --></help>
+        <label><!-- Total Expenses --></label>
+        <name>Total_Expenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trip End Date --></label>
+        <name>Trip_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trip Start Date --></label>
+        <name>Trip_Start_Date__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Destination State must be entered in UPPERCASE --></errorMessage>
+        <name>Destination_State_must_be_uppercase</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Trip end date must be greater than or equal to start date --></errorMessage>
+        <name>Trip_end_date_after_start_date</name>
+    </validationRules>
+</CustomObjectTranslation>

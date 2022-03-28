@@ -120,4 +120,8 @@
         <name>copadoconnect__Copado_Connect</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>Travel_App</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>
