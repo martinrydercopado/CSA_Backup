@@ -155,6 +155,20 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>Manual_Task_Count__c</fullName>
+        <description>Counts as 1 if the task type is Manual Task</description>
+        <externalId>false</externalId>
+        <formula>if(ispickval( copado__Type__c,&quot;Manual Task&quot;),1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Manual Task Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Apply_to__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>

@@ -64,6 +64,10 @@
                 <behavior>Readonly</behavior>
                 <field>Potential_Conflicts__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Total_Manual_Tasks__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

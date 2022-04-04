@@ -73,6 +73,10 @@
         <name>Potential_Conflicts__c</name>
     </fields>
     <fields>
+        <label><!-- Total Manual Tasks --></label>
+        <name>Total_Manual_Tasks__c</name>
+    </fields>
+    <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
         <picklistValues>

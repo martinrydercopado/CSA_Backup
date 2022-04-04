@@ -4951,6 +4951,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copadoconnect__ADOGetReleasesService</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoconnect__ADOGetReleasesServiceTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copadoconnect__ADOProjectDeleteAdaptor</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -4976,6 +4984,18 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copadoconnect__ADOProjectUpdateAdaptorTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoconnect__ADOReleaseGetModel</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoconnect__ADOReleasesGetInputBean</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoconnect__ADOReleasesGetModel</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -10442,6 +10462,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>copado__Deployment_Task__c.Manual_Task_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>copado__Deployment_Task__c.copado__Apply_to__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -13813,6 +13838,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>copado__User_Story__c.Potential_Conflicts__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__User_Story__c.Total_Manual_Tasks__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

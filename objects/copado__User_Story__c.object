@@ -6207,6 +6207,17 @@
         <type>Summary</type>
     </fields>
     <fields>
+        <fullName>Total_Manual_Tasks__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Manual Tasks</label>
+        <summarizedField>copado__Deployment_Task__c.Manual_Task_Count__c</summarizedField>
+        <summaryForeignKey>copado__Deployment_Task__c.copado__User_Story__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
         <fullName>copado__Acceptance_Criteria_Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -7818,11 +7829,9 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <columns>RECORDTYPE</columns>
         <columns>copado__User_Story_Title__c</columns>
         <columns>copado__Status__c</columns>
-        <columns>copado__Priority__c</columns>
         <columns>copado__Order__c</columns>
+        <columns>Total_Manual_Tasks__c</columns>
         <columns>Potential_Conflicts__c</columns>
-        <columns>copado__US_Feature__c</columns>
-        <columns>copado__Epic__c</columns>
         <columns>copado__Project__c</columns>
         <filterScope>Everything</filterScope>
         <filters>

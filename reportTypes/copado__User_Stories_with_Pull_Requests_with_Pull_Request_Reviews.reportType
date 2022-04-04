@@ -369,6 +369,11 @@
             <field>Potential_Conflicts__c</field>
             <table>copado__User_Story__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Total_Manual_Tasks__c</field>
+            <table>copado__User_Story__c</table>
+        </columns>
         <masterLabel>User Stories</masterLabel>
     </sections>
     <sections>
