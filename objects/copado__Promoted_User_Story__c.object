@@ -710,6 +710,20 @@
         <label>Promoted User Story Datatable</label>
     </fieldSets>
     <fields>
+        <fullName>BPCount__c</fullName>
+        <businessStatus>Active</businessStatus>
+        <externalId>false</externalId>
+        <formula>if( copado__Promotion__r.copado__Back_Promotion__c,1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BPCount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Promotion__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>

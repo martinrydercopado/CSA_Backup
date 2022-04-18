@@ -187,7 +187,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
@@ -200,7 +200,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
@@ -227,7 +227,7 @@
         <externalId>false</externalId>
         <label>Description</label>
         <length>32768</length>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Html</type>
         <visibleLines>25</visibleLines>
@@ -264,7 +264,7 @@
         <inlineHelpText>Date time when the job ended.</inlineHelpText>
         <label>End Time</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -288,7 +288,7 @@
         <inlineHelpText>Only displays when there&apos;s an error. It is used to inform the user about what failed during the execution of the associated process.</inlineHelpText>
         <label>Error Message</label>
         <length>32768</length>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
@@ -450,7 +450,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <label>Progress Status</label>
         <length>255</length>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -478,7 +478,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <inlineHelpText>Includes all the returned data by the process. This can be used by other processes.</inlineHelpText>
         <label>Result Data</label>
         <length>131072</length>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -491,7 +491,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <inlineHelpText>Date time when the job started.</inlineHelpText>
         <label>Start Time</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -504,7 +504,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <inlineHelpText>Current status of the result. Confirms if the result is pending or completed.</inlineHelpText>
         <label>Status</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -562,7 +562,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>

@@ -156,8 +156,8 @@
         <fields>copado__Project__c</fields>
         <fields>copado__Release__c</fields>
         <fields>RecordTypeId</fields>
+        <fields>copado__Progress__c</fields>
         <fields>copado__Status__c</fields>
-        <fields>Potential_Conflicts__c</fields>
         <label>User Story Highlight Panel</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
@@ -586,16 +586,6 @@
     <fieldSets>
         <fullName>copado__Bundle_Sync_Fields</fullName>
         <availableFields>
-            <field>copado__Acceptance_Criteria_Status__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>copado__Acceptance_Criteria__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>copado__Apex_Code_Coverage__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -706,6 +696,16 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Is_Bundle__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
             <field>copado__Last_Compliance_Scan_Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -811,6 +811,11 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
+            <field>RecordTypeId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
             <field>copado__Release__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -837,6 +842,11 @@
         </availableFields>
         <availableFields>
             <field>copado__Story_Points_SFDC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SystemModstamp</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -6260,6 +6270,21 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>copado__Actual_Points_Other__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to split your User Story&apos;s actual effort on implementation, reviews, testing, and documentation among different scopes. Example: Dev and QA, Frontend and Backend. You can label this field to match your scope.</inlineHelpText>
+        <label>Actual Points Other</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Apex_Code_Coverage__c</fullName>
         <deprecated>false</deprecated>
         <description>Coverage of the Apex Classes added or committed within the User Story.</description>
@@ -7258,6 +7283,21 @@ IMAGE(&apos;/img/msg_icons/warning16.png&apos;,&apos;OutDated&apos;)+&quot; &quo
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Planned_Points_Other__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to split your User Story effort estimation among different scopes. Example: Dev and QA, Frontend and Backend. You can label this field to match your scope.</inlineHelpText>
+        <label>Planned Points Other</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Platform__c</fullName>
         <deprecated>false</deprecated>
         <description>This field auto-populates and displays the pipeline platform</description>
@@ -7649,12 +7689,28 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__Total_Actual_Points__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>copado__Story_Points_SFDC__c + copado__Actual_Points_Other__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Sum of Actual Points and Actual Points Other. Use this field along with Actual Points Other if you need to split your User Story effort among different scopes.</inlineHelpText>
+        <label>Total Actual Points</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Total_Story_Points__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>copado__Story_Points_SFDC__c+copado__Story_Points_Other__c</formula>
+        <formula>copado__Story_Points_Other__c + copado__Planned_Points_Other__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Total Story Points</label>
+        <label>Total Planned Points</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -7833,6 +7889,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <columns>Total_Manual_Tasks__c</columns>
         <columns>Potential_Conflicts__c</columns>
         <columns>copado__Project__c</columns>
+        <columns>copado__Environment__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>copado__Priority__c</field>

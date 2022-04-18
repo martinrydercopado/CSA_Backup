@@ -5,6 +5,10 @@
         <name>copado__Promoted_User_Story_Datatable</name>
     </fieldSets>
     <fields>
+        <label><!-- BPCount --></label>
+        <name>BPCount__c</name>
+    </fields>
+    <fields>
         <label><!-- Promotion --></label>
         <name>copado__Promotion__c</name>
         <relationshipLabel><!-- Promoted User Stories --></relationshipLabel>
