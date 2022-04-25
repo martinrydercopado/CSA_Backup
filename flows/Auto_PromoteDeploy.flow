@@ -72,8 +72,16 @@
         <connector>
             <targetReference>Get_User_Story</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>copado__Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Complete</stringValue>
+            </value>
+        </filters>
         <object>copado__User_Story_Commit__c</object>
-        <recordTriggerType>Create</recordTriggerType>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
