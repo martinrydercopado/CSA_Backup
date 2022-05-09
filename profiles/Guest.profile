@@ -8113,6 +8113,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Competitor__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.ContractId</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -9964,6 +9969,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>copado__Compliance_Rule_Criteria__c.copado__Value__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Compliance_Rule__c.Description__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -167,6 +167,36 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Competitor__c</fullName>
+        <externalId>false</externalId>
+        <label>Competitor</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Company A</fullName>
+                    <default>false</default>
+                    <label>Company A</label>
+                </value>
+                <value>
+                    <fullName>Company B</fullName>
+                    <default>false</default>
+                    <label>Company B</label>
+                </value>
+                <value>
+                    <fullName>Company C</fullName>
+                    <default>false</default>
+                    <label>Company C</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>ContractId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>

@@ -5,6 +5,10 @@
         <name>copado__Criteria_Page_Fields</name>
     </fieldSets>
     <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
         <help><!-- Action to be performed automatically by Copado --></help>
         <label><!-- Action --></label>
         <name>copado__Action__c</name>
