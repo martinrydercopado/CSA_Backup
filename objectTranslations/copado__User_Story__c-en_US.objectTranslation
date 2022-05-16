@@ -65,6 +65,11 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
+        <help><!-- Determines the order of user story in a large promotion --></help>
+        <label><!-- Deployment Order --></label>
+        <name>Deployment_Order__c</name>
+    </fields>
+    <fields>
         <label><!-- Jira Key --></label>
         <name>Jira_Key__c</name>
     </fields>

@@ -9,10 +9,6 @@
         <name>copado__MC_Promotion_User_Story_Metadata</name>
     </fieldSets>
     <fields>
-        <label><!-- Conflict Count --></label>
-        <name>Conflict_Count__c</name>
-    </fields>
-    <fields>
         <help><!-- Action to be performed with the current metadata when committing --></help>
         <label><!-- Action --></label>
         <name>copado__Action__c</name>

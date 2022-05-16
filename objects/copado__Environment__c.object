@@ -568,13 +568,17 @@
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
         <columns>copado__Type__c</columns>
+        <columns>copado__Enable_Rollback__c</columns>
         <columns>copado__Minimum_Apex_Test_Coverage__c</columns>
         <columns>copado__Org_ID__c</columns>
-        <columns>CREATED_DATE</columns>
         <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>notEqual</operation>
+            <value>Pre-Prod</value>
+        </filters>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Environment Name</label>

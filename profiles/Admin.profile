@@ -156,6 +156,14 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AccountOperations</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountOperationsTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copado__ADD_DependencyHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -14356,11 +14364,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>copado__User_Story_Metadata__c.Conflict_Count__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>copado__User_Story_Metadata__c.copado__Action__c</field>
         <readable>true</readable>
@@ -14453,6 +14456,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>copado__User_Story_Task__c.copadoconnect__Last_Synced_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__User_Story__c.Deployment_Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

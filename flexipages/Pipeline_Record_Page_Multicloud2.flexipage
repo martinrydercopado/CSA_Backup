@@ -380,12 +380,6 @@
                 </visibilityRule>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.copado__Merge_Strategy__c</fieldItem>
-                <identifier>Recordcopado_Merge_Strategy_cField1</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-89de13f9-bc8f-4f1c-a603-b83d8ad5ad5c</name>
         <type>Facet</type>
     </flexiPageRegions>

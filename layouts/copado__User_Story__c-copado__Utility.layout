@@ -68,6 +68,10 @@
                 <behavior>Readonly</behavior>
                 <field>Total_Manual_Tasks__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Deployment_Order__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

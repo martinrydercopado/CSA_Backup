@@ -6194,6 +6194,20 @@
         <label>Work Manager Relations</label>
     </fieldSets>
     <fields>
+        <fullName>Deployment_Order__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the order of user story in a large promotion</inlineHelpText>
+        <label>Deployment Order</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Jira_Key__c</fullName>
         <externalId>false</externalId>
         <label>Jira Key</label>
@@ -6209,9 +6223,13 @@
         <fullName>Potential_Conflicts__c</fullName>
         <externalId>false</externalId>
         <label>Potential Conflicts</label>
-        <summarizedField>copado__User_Story_Metadata__c.Conflict_Count__c</summarizedField>
+        <summaryFilterItems>
+            <field>copado__User_Story_Metadata__c.copado__Status__c</field>
+            <operation>equals</operation>
+            <value>Potential Conflict</value>
+        </summaryFilterItems>
         <summaryForeignKey>copado__User_Story_Metadata__c.copado__User_Story__c</summaryForeignKey>
-        <summaryOperation>sum</summaryOperation>
+        <summaryOperation>count</summaryOperation>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
