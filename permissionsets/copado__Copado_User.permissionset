@@ -321,6 +321,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copado__CheckStatusAction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copado__CliException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -658,6 +662,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__CustomMetadata</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__DML</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1273,6 +1281,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copado__FunctionEngine</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copado__FunctionExecutionQueueable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1617,6 +1629,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copado__MCWebhook</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copado__MC_MassBackPromoteBatch</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1738,6 +1754,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__Notifications</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__NotificationsCenterCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -2473,10 +2493,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SetDefaultStepOrder</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__SetJobStepApiName</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -2873,6 +2889,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copado__WebhookSettingsCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copado__WizardHelper</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3095,6 +3115,10 @@
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
         <name>copado__ExtensionKeyValueSetting__mdt</name>
+    </customMetadataTypeAccesses>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>copado__ExtensionPackageConfiguration__mdt</name>
     </customMetadataTypeAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
@@ -5276,6 +5300,26 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>copado__Notification_Default_Channels__c.copado__Channels__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__Notification_Default_Channels__c.copado__Receiver__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__Notification_Subscription__c.copado__Channels__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__Notification_Subscription__c.copado__Subscribed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>copado__OrgDiff__c.copado__From_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5542,6 +5586,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>copado__Promotion__c.copado__Is_Rolled_Back__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Promotion__c.copado__Last_Deployment_Execution_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Promotion__c.copado__Last_Promotion_Execution_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7115,6 +7169,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__Test__c.copado__ReadyToRun__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>copado__Test__c.copado__Reference__c</field>
         <readable>true</readable>
@@ -8158,6 +8217,24 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>copado__Metadata_Group__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>copado__Notification_Default_Channels__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>copado__Notification_Subscription__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -9442,6 +9519,10 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
+        <tab>copado__Copado_Webhooks</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>copado__Data_Set__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
@@ -9499,6 +9580,10 @@
     </tabSettings>
     <tabSettings>
         <tab>copado__Metadata_Group__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>copado__Notifications_Center</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>

@@ -64,6 +64,11 @@
         </picklistValues>
     </fields>
     <fields>
+        <help><!-- By checking this field, you are indicating that the test is ready to be executed and the &apos;Run&apos; button will display. --></help>
+        <label><!-- Ready to Run --></label>
+        <name>copado__ReadyToRun__c</name>
+    </fields>
+    <fields>
         <label><!-- Reference --></label>
         <name>copado__Reference__c</name>
     </fields>

@@ -134,6 +134,12 @@
                 <identifier>RecordPlatform_cField1</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__Filter_Criteria__c</fieldItem>
+                <identifier>RecordFilter_Criteria_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-adf3ae84-3419-4471-9933-9aad5e3c7cc8</name>
         <type>Facet</type>
     </flexiPageRegions>

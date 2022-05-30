@@ -9,6 +9,18 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copado__Changes</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__FilterCriteria</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__FilterExpression</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copado__QualityGate</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -380,6 +392,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>copado__Quality_Gate_Rule_Condition__c.copado__ExecutionSequence__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Quality_Gate_Rule_Condition__c.copado__Filter_Criteria__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

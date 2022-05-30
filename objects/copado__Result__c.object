@@ -153,6 +153,7 @@
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>A unified place to look for job results when working with automations such as functions or Salesforce flows.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -166,7 +167,7 @@
     <fields>
         <fullName>copado__ApexCallback__c</fullName>
         <deprecated>false</deprecated>
-        <description>This field is updated automatically by Copado.</description>
+        <description>Field automatically updated by Copado that is used to link some processes together.</description>
         <externalId>false</externalId>
         <inlineHelpText>For now only internally used by Copado. It links some Copado processes together.</inlineHelpText>
         <label>Apex Callback</label>
@@ -181,6 +182,7 @@
         <fullName>copado__Custom_Function_Used_Credits__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>Copado credits used in the execution of the function.</description>
         <externalId>false</externalId>
         <inlineHelpText>How many copado credits this process used.</inlineHelpText>
         <label>Copado Credits Used</label>
@@ -195,6 +197,7 @@
     <fields>
         <fullName>copado__Custom_Function_Used_Minutes__c</fullName>
         <deprecated>false</deprecated>
+        <description>Time taken in minutes to execute the function.</description>
         <externalId>false</externalId>
         <label>Custom Function Used Minutes</label>
         <precision>18</precision>
@@ -209,7 +212,7 @@
         <fullName>copado__Deployment__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Used to track multi-step deployment overall results.</description>
+        <description>Lookup field to the deployment that triggered the result.</description>
         <externalId>false</externalId>
         <inlineHelpText>Deployment Parent object that trigger the execution. (for legacy)</inlineHelpText>
         <label>Deployment</label>
@@ -224,6 +227,7 @@
     <fields>
         <fullName>copado__Description__c</fullName>
         <deprecated>false</deprecated>
+        <description>Description of the result record.</description>
         <externalId>false</externalId>
         <label>Description</label>
         <length>32768</length>
@@ -235,7 +239,7 @@
     <fields>
         <fullName>copado__Duration__c</fullName>
         <deprecated>false</deprecated>
-        <description>Total time duration of the job. Use this value to track job performance.</description>
+        <description>Total duration in seconds of the job execution. This value can be used to track job performance.</description>
         <externalId>false</externalId>
         <formula>IF(
   AND(
@@ -259,7 +263,7 @@
     <fields>
         <fullName>copado__End_Time__c</fullName>
         <deprecated>false</deprecated>
-        <description>Date time when the job ended.</description>
+        <description>Date and time when the job ended</description>
         <externalId>false</externalId>
         <inlineHelpText>Date time when the job ended.</inlineHelpText>
         <label>End Time</label>
@@ -271,6 +275,7 @@
     <fields>
         <fullName>copado__Error_Code__c</fullName>
         <deprecated>false</deprecated>
+        <description>Code that helps you quickly identify the issue.</description>
         <externalId>false</externalId>
         <inlineHelpText>Only displays when there&apos;s an error. It shows the error code to identify the issue quickly.</inlineHelpText>
         <label>Error Code</label>
@@ -284,6 +289,7 @@
     <fields>
         <fullName>copado__Error_Message__c</fullName>
         <deprecated>false</deprecated>
+        <description>Description of the error if the job has failed.</description>
         <externalId>false</externalId>
         <inlineHelpText>Only displays when there&apos;s an error. It is used to inform the user about what failed during the execution of the associated process.</inlineHelpText>
         <label>Error Message</label>
@@ -296,6 +302,7 @@
     <fields>
         <fullName>copado__Function_Worker_Size__c</fullName>
         <deprecated>false</deprecated>
+        <description>Computational resources available for function(Function credit limit is linked to size),  &apos;S&apos; =&gt; 1, &apos;M&apos; =&gt; 2, &apos;L&apos; =&gt; 4, &apos;XL&apos; =&gt; 8</description>
         <externalId>false</externalId>
         <label>Function Worker Size</label>
         <required>false</required>
@@ -333,6 +340,7 @@
         <fullName>copado__Function__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Lookup field to the function that triggered the result.</description>
         <externalId>false</externalId>
         <inlineHelpText>Function Parent object that trigger the execution.</inlineHelpText>
         <label>Function</label>
@@ -348,6 +356,7 @@
         <fullName>copado__JobStep__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>When this result is the outcome of a Job Step, that is executed as part of a Job Template, this field points to the Job Step. (note that Job Step and Function can be populated at the same time).</description>
         <externalId>false</externalId>
         <inlineHelpText>When this result is the outcome of a Job Step, that is executed as part of a Job Template, this fields points to the Job Step. (note that Job Step and Function can be populated at the same time)</inlineHelpText>
         <label>Job Step</label>
@@ -362,7 +371,7 @@
     <fields>
         <fullName>copado__Job_Id__c</fullName>
         <deprecated>false</deprecated>
-        <description>Unique identifier for the jobs. This is as an External Id for mapping this result with an external job.</description>
+        <description>Unique identifier used to map the result with an external job.</description>
         <externalId>true</externalId>
         <inlineHelpText>For devs to map this process with any other process that happens outside Copado.</inlineHelpText>
         <label>External Job ID</label>
@@ -376,6 +385,7 @@
     <fields>
         <fullName>copado__Job_Type__c</fullName>
         <deprecated>false</deprecated>
+        <description>API name of the job that triggered the result. This information can be used for reporting purposes.</description>
         <externalId>false</externalId>
         <inlineHelpText>API name of the parent Job. Used for reporting purposes mainly.</inlineHelpText>
         <label>Job API Name</label>
@@ -397,7 +407,7 @@
     <fields>
         <fullName>copado__Link__c</fullName>
         <deprecated>false</deprecated>
-        <description>Link to open more information about the results.</description>
+        <description>Field used to link an external result to the Result record.</description>
         <externalId>false</externalId>
         <inlineHelpText>Used if this execution result summary links to other result summary in any other system than Copado.</inlineHelpText>
         <label>External Result Link</label>
@@ -409,6 +419,7 @@
     <fields>
         <fullName>copado__ParentId__c</fullName>
         <deprecated>false</deprecated>
+        <description>15-digit Id of the record that triggered the process that generated the result.</description>
         <externalId>false</externalId>
         <inlineHelpText>15-digit ID of the record that triggered the process that generated the result. (e.g. A Job Step) We use a text field because Salesforce only allows one type in lookup fields.</inlineHelpText>
         <label>Context ID</label>
@@ -459,7 +470,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <fullName>copado__Promotion__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Used to track job results triggered from promotion events.</description>
+        <description>Lookup field to the promotion that triggered the result.</description>
         <externalId>false</externalId>
         <inlineHelpText>Promotion Parent object that trigger the execution.</inlineHelpText>
         <label>Promotion</label>
@@ -474,6 +485,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
     <fields>
         <fullName>copado__Result_Data__c</fullName>
         <deprecated>false</deprecated>
+        <description>Includes all the returned data by the process. This can be used by other processes.</description>
         <externalId>false</externalId>
         <inlineHelpText>Includes all the returned data by the process. This can be used by other processes.</inlineHelpText>
         <label>Result Data</label>
@@ -486,7 +498,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
     <fields>
         <fullName>copado__Start_Time__c</fullName>
         <deprecated>false</deprecated>
-        <description>Date time when the job started.</description>
+        <description>Date and time when the job started.</description>
         <externalId>false</externalId>
         <inlineHelpText>Date time when the job started.</inlineHelpText>
         <label>Start Time</label>
@@ -499,7 +511,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <fullName>copado__Status__c</fullName>
         <defaultValue>&quot;Not Started&quot;</defaultValue>
         <deprecated>false</deprecated>
-        <description>Current status of the result. Confirms if the result is pending or completed.</description>
+        <description>Status of the job execution.</description>
         <externalId>false</externalId>
         <inlineHelpText>Current status of the result. Confirms if the result is pending or completed.</inlineHelpText>
         <label>Status</label>
@@ -542,6 +554,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <fullName>copado__Test__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>The Test parent object which triggered the execution.</description>
         <externalId>false</externalId>
         <inlineHelpText>Test Parent object that trigger the execution.</inlineHelpText>
         <label>Test</label>
@@ -556,6 +569,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
     <fields>
         <fullName>copado__Timeout__c</fullName>
         <deprecated>false</deprecated>
+        <description>If you want Copado to update the status to Failed if there is no response from the function’s job after a certain period of time (e.g., 60 minutes), you can define it here.</description>
         <externalId>false</externalId>
         <inlineHelpText>Upper limit of allocated execution time. If the process takes longer than this, it will be automatically terminated.</inlineHelpText>
         <label>Timeout (minutes)</label>
@@ -571,7 +585,7 @@ IF( !ISBLANK(copado__JobStep__c), copado__JobStep__r.Name,
         <fullName>copado__User_Story__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>User story that originated the result.</description>
+        <description>Lookup field to the user story that triggered the result.</description>
         <externalId>false</externalId>
         <inlineHelpText>User Story Parent object that trigger the execution. (a commit for example)</inlineHelpText>
         <label>User Story</label>
