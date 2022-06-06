@@ -15541,6 +15541,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>ChangeRequest-Change Request Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>ContactPointAddress-Contact Point Address Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
