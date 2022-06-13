@@ -7924,11 +7924,6 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <columns>copado__Project__c</columns>
         <columns>copado__Environment__c</columns>
         <filterScope>Everything</filterScope>
-        <filters>
-            <field>copado__Priority__c</field>
-            <operation>notEqual</operation>
-            <value>3</value>
-        </filters>
         <label>All</label>
     </listViews>
     <listViews>
