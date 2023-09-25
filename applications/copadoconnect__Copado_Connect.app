@@ -21,6 +21,7 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Copado Connect</label>
     <navType>Standard</navType>
+    <subscriberTabs>copado__User_Story__c</subscriberTabs>
     <tabs>copadoconnect__Copado_Integration__c</tabs>
     <tabs>copadoconnect__Integration_Log__c</tabs>
     <uiType>Lightning</uiType>

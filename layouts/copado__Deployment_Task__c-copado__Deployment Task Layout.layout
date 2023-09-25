@@ -27,6 +27,14 @@
                 <behavior>Readonly</behavior>
                 <field>Manual_Task_Count__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Task_Owner_Text__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Task_Owner__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -53,6 +61,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>copado__Task_Description__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>copado__dataJSON__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
@@ -98,7 +110,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hb0000003dl1p</masterLabel>
+        <masterLabel>00h8c00000hWDa5</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

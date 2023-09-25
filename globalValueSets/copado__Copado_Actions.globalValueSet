@@ -31,6 +31,11 @@
         <label>Publish Package Version</label>
     </customValue>
     <customValue>
+        <fullName>Import Package</fullName>
+        <default>false</default>
+        <label>Import Package</label>
+    </customValue>
+    <customValue>
         <fullName>PackageCreation</fullName>
         <default>false</default>
         <isActive>false</isActive>

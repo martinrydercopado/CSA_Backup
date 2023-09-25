@@ -528,11 +528,6 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>copado__Promotion__r.copado__Project__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>copado__Promotion__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -569,6 +564,11 @@
         </availableFields>
         <availableFields>
             <field>copado__Source_Environment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Promotion__r.copado__Status__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -887,7 +887,7 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <externalId>false</externalId>
         <label>Source Credential</label>
         <lookupFilter>
-            <active>true</active>
+            <active>false</active>
             <filterItems>
                 <field>copado__Org__c.CreatedById</field>
                 <operation>equals</operation>
@@ -1428,7 +1428,7 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>copado__Schedule__c</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>Read</sharingModel>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Cancel_Deployment</fullName>

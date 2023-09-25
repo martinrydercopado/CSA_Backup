@@ -459,7 +459,7 @@ MetadataGrid2.prototype._getColumnsByGridMode = function() {
             width: '30%',
             validation: function (cell, value) {
                     if (!value || value == ' ') {
-                        return { result: false, message: 'You must specify a value' };
+                        return { result: false, message: copadoLabels.YOU_MUST_SPECIFY_A_VALUE };
                 }
                 return true;
             }
@@ -474,10 +474,10 @@ MetadataGrid2.prototype._getColumnsByGridMode = function() {
             width: '10%',
             validation: function (cell, value) {
                     if (!value || value == ' ') {
-                        return { result: false, message: 'You must specify a value' };
+                        return { result: false, message: copadoLabels.YOU_MUST_SPECIFY_A_VALUE };
                 }
                 if (value.indexOf(' ') >= 0) {
-                        return { result: false, message: 'Remove all blank spaces' };
+                        return { result: false, message: copadoLabels.REMOVE_ALL_BLANK_SPACES };
                 }
                 return true;
             }
@@ -598,7 +598,7 @@ MetadataGrid2.prototype.render = function(cbAfterRender) {
             console.debug('args===> ',args);
             if (args) {
                 that.filterByTypeSelectedIndex = args.index;
-                that.filterByType = args.item.label;
+                that.filterByType = args.item != null ? args.item.label : '';
             }
         });
         this.eltMetaDataTypeFilter.bind('close', function(event) {
@@ -787,7 +787,7 @@ MetadataGrid2.prototype.render = function(cbAfterRender) {
                 that.render();
         };
         // Initialize the select all/unselect all buttons
-        var $unselectAll = $copado('<button id="unselectAll">Unselect All</button>').on('click', function(e) {
+        var $unselectAll = $copado('<button id="unselectAll">'+copadoLabels.unselect_all+'</button>').on('click', function(e) {
                 e.preventDefault();
                 selectAll(false);
             // setting tab to "All Metadata" when there is no selection.
@@ -796,7 +796,7 @@ MetadataGrid2.prototype.render = function(cbAfterRender) {
             }
             });
 
-        var $selectAll = $copado('<button id="selectAll">Select All</button>').on('click', function(e) {
+        var $selectAll = $copado('<button id="selectAll">'+copadoLabels.select_all+'</button>').on('click', function(e) {
             e.preventDefault();
             selectAll(true);
         });
@@ -950,6 +950,8 @@ MetadataGrid2.prototype.loadMetaData = function(callbackFinished, forceRefresh) 
         url = rock.config.metadata_url;
     }
     console.debug('MetadataGrid2.loadMetaData', 'force?' + forceRefresh, conf.data.orgId, this.filterByType, url);
+    that._enableRefreshSelectedMtdataBtn();
+    
     dw.u.getCachedRemote({
        url: url,
        name: this.filterByType || conf.attachmentName,
@@ -1038,12 +1040,30 @@ MetadataGrid2.prototype.loadData = function(callbackFinished) {
 MetadataGrid2.prototype.refreshCache = function(callbackFinished) {
     var that = this;
     lockScreen();
+
     this.loadMetaData(function(cachedDate) {
+        $copado('[id="refreshComplete"]').val('true');
         console.info('MetadataGrid2.refreshCache() grid data refreshed');
         that.render();
         unlockScreen();
-        if (callbackFinished) callbackFinished(cachedDate);
+        // set refresh cache done
+        $copado('[id="notificationModalRefresh"]').hide();
+        $copado('[id="backDropRefresh"]').hide();
+        clearMessagesMap();
+        if (callbackFinished) {
+            callbackFinished(cachedDate);
+        }
     }, true);
+ };
+
+MetadataGrid2.prototype._enableRefreshSelectedMtdataBtn = function() {
+    var that = this;
+    const REFRESH = 'Refresh ';
+    let refreshSelectedMetadata = $copado('[id="btnRefreshSelectedMetadata"]');
+    if(refreshSelectedMetadata){
+        refreshSelectedMetadata.text(REFRESH+that.filterByType);
+        refreshSelectedMetadata.prop('disabled', false);
+    }
  };
 
  // calls the API to refresh the metadata attachment (filtered or not)

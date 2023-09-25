@@ -87,6 +87,11 @@ WARNING: Credits consumption will apply as a regular deployment since resource-w
         <name>copado__ParentId__c</name>
     </fields>
     <fields>
+        <label><!-- Promotion --></label>
+        <name>copado__Promotion__c</name>
+        <relationshipLabel><!-- Steps --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Read Only --></label>
         <name>copado__Read_Only__c</name>
     </fields>
@@ -198,4 +203,8 @@ WARNING: Credits consumption will apply as a regular deployment since resource-w
         <label><!-- dataJson --></label>
         <name>copado__dataJson__c</name>
     </fields>
+    <validationRules>
+        <errorMessage><!-- Validation Deployments cannot be reused as real deployments --></errorMessage>
+        <name>Cannot_Uncheck_Validation</name>
+    </validationRules>
 </CustomObjectTranslation>

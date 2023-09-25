@@ -44,6 +44,18 @@
         <relationshipLabel><!-- Tests --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Latest Result Status --></label>
+        <name>copado__Latest_Result_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Id --></label>
+        <name>copado__Parent_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent --></label>
+        <name>copado__Parent__c</name>
+    </fields>
+    <fields>
         <label><!-- Priority --></label>
         <name>copado__Priority__c</name>
         <picklistValues>
@@ -62,6 +74,11 @@
             <masterLabel>Medium</masterLabel>
             <translation><!-- Medium --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promotion --></label>
+        <name>copado__Promotion__c</name>
+        <relationshipLabel><!-- Tests --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- By checking this field, you are indicating that the test is ready to be executed and the &apos;Run&apos; button will display. --></help>
@@ -97,6 +114,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Test Tool --></label>
+        <name>copado__Test_Tool__c</name>
+    </fields>
+    <fields>
         <label><!-- Tool - Deprecated --></label>
         <name>copado__Tool__c</name>
     </fields>
@@ -109,4 +130,8 @@
         <name>copado__User_Story__c</name>
         <relationshipLabel><!-- Tests --></relationshipLabel>
     </fields>
+    <validationRules>
+        <errorMessage><!-- This Tool Configuration cannot be modified. Please create a new Test and select the Tool Configuration needed. --></errorMessage>
+        <name>copado__PreventUpdatingToolConfiguration</name>
+    </validationRules>
 </CustomObjectTranslation>

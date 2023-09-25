@@ -5,6 +5,15 @@
         <name>Manual_Task_Count__c</name>
     </fields>
     <fields>
+        <label><!-- Task Owner Text --></label>
+        <name>Task_Owner_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Owner --></label>
+        <name>Task_Owner__c</name>
+        <relationshipLabel><!-- Deployment Tasks --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Apply to --></label>
         <name>copado__Apply_to__c</name>
         <picklistValues>

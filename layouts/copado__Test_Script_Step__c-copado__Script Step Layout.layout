@@ -47,6 +47,10 @@
                 <behavior>Edit</behavior>
                 <field>copado__Result__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Screenshots__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
     </layoutSections>

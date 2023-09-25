@@ -72,6 +72,14 @@
                 <behavior>Edit</behavior>
                 <field>Deployment_Order__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>TEST_REQUIRED__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Number_of_Promotions__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -451,6 +459,7 @@
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>copado__Git_Org_Commit__c.NAME</fields>
+        <fields>copado__Git_Org_Commit__c.copado__Git_Operation__c</fields>
         <fields>copado__Git_Org_Commit__c.copado__Commit_Date__c</fields>
         <fields>copado__Git_Org_Commit__c.copado__Commit_Message__c</fields>
         <fields>copado__Git_Org_Commit__c.copado__Status__c</fields>

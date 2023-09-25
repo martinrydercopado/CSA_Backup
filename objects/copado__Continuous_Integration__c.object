@@ -497,7 +497,7 @@
         <customTabListAdditionalFields>copado__Destination_Org_Credential__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Status__c</customTabListAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <sharingReasons>
         <fullName>copado__ContinuousIntegrationPermission__c</fullName>
         <label>Continuous Integration Permission</label>

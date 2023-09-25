@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
+        <label><!-- Add Test Classes --></label>
+        <name>cmcSf__Add_Test_Classes</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Pipeline Based Package Distribution --></label>
+        <name>cmcSf__PipelineBasedPackageDistribution</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- Bundle --></label>
         <name>copado__Bundle</name>
     </fieldSets>
     <fieldSets>
         <label><!-- Bundle Sync Fields --></label>
         <name>copado__Bundle_Sync_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Bundled Stories --></label>
+        <name>copado__Bundled_Stories</name>
     </fieldSets>
     <fieldSets>
         <label><!-- CBM Fields --></label>
@@ -74,12 +86,61 @@
         <name>Jira_Key__c</name>
     </fields>
     <fields>
+        <label><!-- Number of Promotions --></label>
+        <name>Number_of_Promotions__c</name>
+    </fields>
+    <fields>
         <label><!-- Potential Conflicts --></label>
         <name>Potential_Conflicts__c</name>
     </fields>
     <fields>
+        <label><!-- TEST_REQUIRED --></label>
+        <name>TEST_REQUIRED__c</name>
+    </fields>
+    <fields>
         <label><!-- Total Manual Tasks --></label>
         <name>Total_Manual_Tasks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apex Test Level --></label>
+        <name>cmcSf__Apex_Test_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Ready to Promote Time --></label>
+        <name>cml_First_Ready_to_Promote_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Time Promoted Prod Or Rolled Back --></label>
+        <name>cml_First_Time_Promoted_Prod_or_RB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Found in Promotion --></label>
+        <name>cml_Found_in_Promotion__c</name>
+        <relationshipLabel><!-- User Stories (Found in Promotion) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is Business Disruption Failure --></label>
+        <name>cml_Is_Business_Disruption_Failure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Severity --></label>
+        <name>cml_Severity__c</name>
+        <picklistValues>
+            <masterLabel>P0 - Blocker - Business Disruption</masterLabel>
+            <translation><!-- P0 - Blocker - Business Disruption --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P1 - Critical - No Workaround</masterLabel>
+            <translation><!-- P1 - Critical - No Workaround --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2 - Major</masterLabel>
+            <translation><!-- P2 - Major --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P3 - Minor</masterLabel>
+            <translation><!-- P3 - Minor --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Acceptance Criteria Status --></label>
@@ -216,7 +277,7 @@
     </fields>
     <fields>
         <help><!-- If checked, this user story will not be included in the count of user stories ahead and behind. --></help>
-        <label><!-- Exclude From CBM --></label>
+        <label><!-- Exclude from Pipelines --></label>
         <name>copado__Exclude_From_CBM__c</name>
     </fields>
     <fields>
@@ -775,7 +836,7 @@
     </fields>
     <fields>
         <help><!-- If checked, the User Story will not be indexed for Copado&apos;s Overlap Awareness. --></help>
-        <label><!-- Stop Indexing Metadata --></label>
+        <label><!-- Exclude from Overlap Awareness --></label>
         <name>copado__Stop_Indexing_Metadata__c</name>
     </fields>
     <fields>
@@ -890,6 +951,10 @@
         <name>copado__CredentialsMustBelongToTheEnvironment</name>
     </validationRules>
     <validationRules>
+        <errorMessage><!-- You cannot enable the &quot;Ready to Promote&quot; or the &quot;Promote &amp; Deploy&quot; options because the &quot;Exclude from Pipeline&quot; option is enabled. Please disable this option first and try again. --></errorMessage>
+        <name>copado__Excluded_User_Stories_Not_Promotable</name>
+    </validationRules>
+    <validationRules>
         <errorMessage><!-- This User Story does not meet the required Apex coverage threshold to be promoted. --></errorMessage>
         <name>copado__Promote_User_Story_Apex_validation</name>
     </validationRules>
@@ -901,6 +966,10 @@
         <errorMessage><!-- Enter a value between 0 to 100 to specify the Progress in percentage. --></errorMessage>
         <name>copado__User_Story_Progress_Range_Validation</name>
     </validationRules>
+    <webLinks>
+        <label><!-- Check_Status_History --></label>
+        <name>Check_Status_History</name>
+    </webLinks>
     <webLinks>
         <label><!-- Add_Apex_Tests --></label>
         <name>copado__Add_Apex_Tests</name>

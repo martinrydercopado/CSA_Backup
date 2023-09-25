@@ -262,7 +262,6 @@ dw.u.upsertFile = function(parentId, filename, data) {
     cv.Title=filename;
     cv.PathOnClient= filename+'.json';
     cv.VersionData= Base64.encode(data);
-
     var existingFile = dw.u.getFile(parentId, filename);
     if (existingFile && existingFile[0]) {
         //cv.ContentDocumentId = getContentDocuments(parentId)[0].ContentDocumentId;
@@ -393,7 +392,7 @@ function getContentDocuments(parentId) {
 }
 
 function getContentVersion(documentIds, fileName) {
-    var query = "SELECT VersionData,ContentDocumentId FROM ContentVersion WHERE PathOnClient = '" + htmlEntities(fileName).replace(/'/g, "\\'") + "' AND ContentDocumentId IN ('" + documentIds + "') AND IsLatest = true ORDER BY LastModifiedDate DESC LIMIT 1";
+    var query = "SELECT VersionData,ContentDocumentId FROM ContentVersion WHERE PathOnClient IN ('" + htmlEntities(fileName).replace(/'/g, "\\'") + "', '" + htmlEntities(fileName+'.json').replace(/'/g, "\\'") + "') AND ContentDocumentId IN ('" + documentIds + "') AND IsLatest = true ORDER BY LastModifiedDate DESC LIMIT 1";
     var versions = sforce.connection.query(query);
     return versions.getArray("records");
 }
@@ -437,8 +436,9 @@ dw.u.getFileContent = function(parentId, name) {
     return content;
 };
 
-dw.u.getAttach = function(parentId, name) {
-    var q = "Select Id, Body, LastModifiedDate, Name, ParentId From Attachment where Name='" + name + "' and parentId = '" + parentId + "' order by LastModifiedDate DESC limit 1",
+dw.u.getAttach = function(parentId, name, attId) {
+    let whereClause = (attId ? (" Id= '" + attId +  "'") :  (" Name='" + name + "'"));
+    var q = "Select Id, Body, LastModifiedDate, Name, ParentId From Attachment where " + whereClause + " and parentId = '" + parentId + "' order by LastModifiedDate DESC limit 1",
         result = sforce.connection.query(q),
         records = result.getArray("records");
     return records;
@@ -464,12 +464,10 @@ dw.u.getDecodedAttach = function(parentId, name) {
 
 
 //upsert
-dw.u.upsertAttach = function(parentId, name, body, alreadyCheck, newName) {
-
-
+dw.u.upsertAttach = function(parentId, name, body, alreadyCheck, newName, attId) {
     var Id = false;
     if (!alreadyCheck) {
-        var attach = dw.u.getAttach(parentId, name);
+        var attach = dw.u.getAttach(parentId, name, attId);
         if (attach.length) {
             Id = attach[0].Id;
         }
@@ -488,7 +486,6 @@ dw.u.upsertAttach = function(parentId, name, body, alreadyCheck, newName) {
     if (Id) {
         att.Id = Id;
     }
-
     var result = sforce.connection.upsert("Id", [att]);
 
 
@@ -530,19 +527,17 @@ dw.u.getCachedRemote = function(opt) {
     };*/
 
     var attach = dw.u.getAttach(opt.parentId, opt.name);
-    console.log('attach=1==> ',attach);
+    
     if (opt.force || attach.length != 1) {
-
+        
         //get remote and save
         dw.u.getRemote.attempts = 0;
 
         dw.u.getRemote(opt.url, function(res) {
-                console.log('getRemote ok', res);
 
                 //save as attach
                 dw.u.upsertAttach(opt.parentId, opt.name, JSON.stringify(res), !opt.force);
                 var attachLocal = dw.u.getAttach(opt.parentId, opt.name);
-                console.log('attachLocal===> ',attachLocal);
                 //format date
                 var date = Date.fromISOString(attachLocal[0].LastModifiedDate);
                 //added by UCU to be able update Refresh Cache date-time for the new attachments on Grid
@@ -554,9 +549,7 @@ dw.u.getCachedRemote = function(opt) {
     } else {
          try{
             //decode the attach body
-            console.log('attach==2=> ',attach);
-            var res = decodeURIComponent(escape(window.atob( attach[0].Body )));
-            
+            var res = decodeURIComponent(encodeURIComponent(window.atob( attach[0].Body )));
 
             //format date
             var date = Date.fromISOString(attach[0].LastModifiedDate);
@@ -772,6 +765,7 @@ var coGridHelper = {
             len = data.length;
 
         coGridHelper._selectedNames = [];
+        coGridHelper._retrieveOnlyNames = [];
 
         while (len--) {
             var o = {
@@ -787,6 +781,12 @@ var coGridHelper = {
                 f: data[len].f
             };
 
+            if (typeof data[len].ns != 'undefined') {
+                o.ns = data[len].ns;
+            } else {
+                o.t = data[len].t;
+            }
+
             if (typeof data[len].r !== 'undefined') {
                 o.r = data[len].r;
             } else {
@@ -794,18 +794,16 @@ var coGridHelper = {
                 //should never be undefined in the attachment that we create for backend to use
                 o.r = false;
             }
-
-            if (typeof data[len].ns != 'undefined') {
-                o.ns = data[len].ns;
-            } else {
-                o.t = data[len].t;
+           if(o.r == true) {
+               data[len].s && coGridHelper._retrieveOnlyNames.push(o);
             }
-
-            data[len].s && coGridHelper._selectedNames.push(o);
+                data[len].s && coGridHelper._selectedNames.push(o);
         }
         return coGridHelper._selectedNames;
     },
 
+    // retrieve only names
+    _retrieveOnlyNames: [],
     //selected "Names"
     _selectedNames: [],
 
@@ -845,12 +843,13 @@ var coGridHelper = {
      * @param  {[type]} callcack
      * @return {[type]}                      false
      */
-    saveSelected: function(id, type, additionalValidation, allowEmpty, callback, sel, isRollback) {
+    saveSelected: function(id, type, additionalValidation, allowEmpty, callback, sel, isRollback, attachmentSize) {
         console.debug('... Saving Attachment');
         var me = coGridHelper;
         //validations
         //check global selected items
         me.getSelectedObj();
+        
         if (!allowEmpty && !me._selectedNames.length) {
             //check if copadoApp showmessage is active
             if (copadoApp.showMessage) {
@@ -861,11 +860,29 @@ var coGridHelper = {
             return false;
         }
         var valid = !additionalValidation ? true : additionalValidation(me._selectedNames);
-        valid && me.remoteSaveMeta(id, sel || me._selectedNames, type, callback, isRollback);
-
+        valid && me.remoteSaveMeta(id, sel || me._selectedNames, type, callback, isRollback, attachmentSize);
         return false;
     },
 
+     /**
+     * Save in attachment the selected items of the grid
+     * @param  {[type]} id                   parentId
+     * @param  {[type]} type                 Attachment Name
+     * @param  {[type]} additionalValidation function for additional validations
+     * @param  {[type]} allowEmpty           skip length validation
+     * @param  {[type]} callcack
+     * @return {[type]}                      false
+     */
+      saveRetrieveOnly: function( id, type, additionalValidation, callback, ret, isRollback, attachmentSize) {
+        console.debug('... Saving RetrieveOnly Attachment');
+        var me = coGridHelper;
+        //validations
+        //check global selected items
+        //me.getSelectedObj();
+        var valid = !additionalValidation ? true : additionalValidation(me._retrieveOnlyNames);
+        valid && me.remoteSaveMeta(id, ret || me._retrieveOnlyNames, type, callback, isRollback, attachmentSize);
+        return false;
+    },
     /**
      * save an attachment
      * @param  {[type]} id       parentId
@@ -875,26 +892,38 @@ var coGridHelper = {
      * @return {[type]}          void
      */
     // write
-    remoteSaveMeta: function(id, items, type, callback, isRollback) {
+    remoteSaveMeta: function(id, items, type, callback, isRollback, attachmentSize) {
         if (isRollback) {
             if (type === 'Selected items to rollback') {
-                var deletedItems=[];
-                var createdUpdatedItems=[];
-                items.forEach((item) => {
-                    if(item.a === 'create'){
-                        deletedItems.push(item);
+                //we need to support both scenarios when only one single step is created for promotion and deletion. 
+                //So if the attachment size is more than 1 it is supporting old version of backend
+                if(attachmentSize && attachmentSize == 2) {
+                    let deletedItems=[];
+                    let createdUpdatedItems=[];
+                    items.forEach((item) => {
+                        if(item.a === 'create'){
+                            deletedItems.push(item);
+                        }
+                        else{
+                            createdUpdatedItems.push(item);
+                        }
+                    });
+                    if (createdUpdatedItems.length) {
+                        dw.u.upsertFile(id, type+'_Git Promotion', JSON.stringify(createdUpdatedItems));
                     }
-                    else{
+                    if (deletedItems.length) {
+                        dw.u.upsertFile(id, type+'_Delete Metadata', JSON.stringify(deletedItems));
+                    }
+                } else {
+                    let createdUpdatedItems=[];
+                    items.forEach((item) => {
                         createdUpdatedItems.push(item);
+                    });
+                    if (createdUpdatedItems.length) {
+                        dw.u.upsertFile(id, type+'_Git Promotion', JSON.stringify(createdUpdatedItems));
                     }
-                });
-                if (createdUpdatedItems.length) {
-                    dw.u.upsertFile(id, type+'_Git Promotion', JSON.stringify(createdUpdatedItems));
                 }
-
-                if (deletedItems.length) {
-                    dw.u.upsertFile(id, type+'_Delete Metadata', JSON.stringify(deletedItems));
-                }
+                
             }
             else {
                 dw.u.upsertFile(id, type, JSON.stringify(items));

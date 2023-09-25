@@ -268,14 +268,10 @@
     </fields>
     <label>Integration Log</label>
     <listViews>
-        <fullName>copadoconnect__All</fullName>
+        <fullName>All</fullName>
         <columns>NAME</columns>
-        <columns>copadoconnect__Error_Message__c</columns>
-        <columns>copadoconnect__Result_Data__c</columns>
-        <columns>copadoconnect__Object_Name__c</columns>
-        <columns>copadoconnect__Error_Code__c</columns>
-        <columns>copadoconnect__External_ID__c</columns>
         <columns>CREATED_DATE</columns>
+        <columns>copadoconnect__Error_Message__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
