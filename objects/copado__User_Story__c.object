@@ -8338,12 +8338,12 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <sorted>false</sorted>
                 <value>
                     <fullName>NoTestRun</fullName>
-                    <default>true</default>
+                    <default>false</default>
                     <label>NoTestRun</label>
                 </value>
                 <value>
                     <fullName>RunSpecifiedTests</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>RunSpecifiedTests</label>
                 </value>
                 <value>

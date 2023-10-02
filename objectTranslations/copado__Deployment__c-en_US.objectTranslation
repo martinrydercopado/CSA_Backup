@@ -13,6 +13,11 @@
         <name>copado__Pipeline_Deployment_Modal</name>
     </fieldSets>
     <fields>
+        <help><!-- Link to open Copado AI Companion --></help>
+        <label><!-- Copado AI Companion Link --></label>
+        <name>copadoAiHelper__Copado_AI_Companion_Link__c</name>
+    </fields>
+    <fields>
         <help><!-- Only Active Templates are available when searching for them, for example in deployment steps --></help>
         <label><!-- Active --></label>
         <name>copado__Active__c</name>
