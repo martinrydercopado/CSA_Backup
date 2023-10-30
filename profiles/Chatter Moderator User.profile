@@ -171,6 +171,14 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>ImportPresetComplianceRules</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ImportPresetComplianceRulesTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Profile2PermSet__FieldPermissionsBatchCloner</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -308,6 +316,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Profile2PermSet__utilities</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SObjectDataLoader</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SObjectDataLoaderTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -11755,6 +11771,11 @@
         <editable>true</editable>
         <field>Opportunity.Amount</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Buyer_Budget_Verified__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

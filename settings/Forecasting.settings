@@ -224,6 +224,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -270,6 +274,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -417,6 +422,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -462,6 +471,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -613,6 +623,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -659,6 +673,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -806,6 +821,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -851,6 +870,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1002,6 +1022,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -1048,6 +1072,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1195,6 +1220,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -1240,6 +1269,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1391,6 +1421,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -1437,6 +1471,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1584,6 +1619,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -1629,6 +1668,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1776,6 +1816,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -1821,6 +1865,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1972,6 +2017,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -2018,6 +2067,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -2165,6 +2215,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -2210,6 +2264,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -2357,6 +2412,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N8c00000h7Ohi</field>
+            <label>Buyer Budget Verified?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N8c00000dYylt</field>
             <label>Competitor</label>
         </opportunityListFieldsLabelMappings>
@@ -2402,6 +2461,7 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N8c00000h7Ohi</field>
             <field>00N8c00000dYylt</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
