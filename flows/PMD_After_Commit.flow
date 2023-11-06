@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Run_Static_Code_Analysis</name>
+        <label>Run Static Code Analysis</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>copado__RunUserStoryStaticCodeAnalysis</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>orgId</name>
+            <value>
+                <elementReference>$Record.copado__User_Story__r.copado__Environment__r.copado__Org_ID__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>storyId</name>
+            <value>
+                <elementReference>$Record.copado__User_Story__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>copado__RunUserStoryStaticCodeAnalysis</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Check_for_Apex_Code</name>
+        <label>Check for Apex Code</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Has_Apex</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.copado__User_Story__r.copado__Has_Apex_Code__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Run_Static_Code_Analysis</targetReference>
+            </connector>
+            <label>Has Apex</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>PMD After Commit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMD After Commit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_Apex_Code</targetReference>
+        </connector>
+        <object>copado__User_Story_Commit__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>
