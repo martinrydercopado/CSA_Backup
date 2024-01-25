@@ -5,6 +5,10 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>cmcSf__ActionTemplate</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__AddApexTestsAcceptanceCriteriaCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -13,11 +17,19 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__ApexTestSuitesAndClasses</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__ApexTestsResult</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__CheckPackageDistributionLicense</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__CheckVlocityEnabled</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -33,7 +45,19 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__ContentDocumentHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__CreateCopadoNotificationPushTopic</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__CustomHighlightPanelController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataTemplateFilterController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -49,11 +73,39 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__GetApexCodeCoverageFromOrg</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetDxNamespace</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetInstallationKeys</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__GetPackageVersionWithKeys</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__GetVlocityDependencies</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__HandleApexTestRecord</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__HasVlocityChanges</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__HasVlocitySnapshotJobTemplate</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__InitializeSFDXProject</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -70,6 +122,22 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__JobStepCustomSettingHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__JobStepDataDeployController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__LwcLabelsTranslation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__LwcResponse</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__MetadataRefresh</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -90,6 +158,30 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__PipelineDistributionCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__PromotionRollbackCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshMetadataCallback</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshOrgMetadataCache</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshVlocityCallback</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RollbackHeaderCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RollbackTableContainerCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -116,6 +208,18 @@
         <apexClass>cmcSf__UserStoryMetadataListCtlr</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocityRefresh</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocitySettingsDestinationId</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocitySettingsSourceId</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
         <name>copado__ExtensionPackageConfiguration__mdt</name>
@@ -128,6 +232,10 @@
         <enabled>true</enabled>
         <name>copado__UISection__mdt</name>
     </customMetadataTypeAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>cmcSf__Enable_Metadata_List</name>
+    </customPermissions>
     <customPermissions>
         <enabled>true</enabled>
         <name>cmcSf__Manage_Package_Keys</name>
@@ -176,6 +284,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>copado__Artifact_Version__c.cmcSf__Api_Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>copado__Artifact_Version__c.cmcSf__Code_Coverage__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -211,7 +324,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>copado__Artifact__c.cmcSf__Api_Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>copado__Artifact__c.cmcSf__IsOrgDependent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__Artifact__c.cmcSf__PackagePath__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -376,12 +499,32 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>copado__Promotion__c.cmcSf__Attach_Vlocity_Build_File__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>copado__Promotion__c.cmcSf__Debug_Mode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>copado__Promotion__c.cmcSf__Last_Rollback_Execution_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>copado__Promotion__c.cmcSf__Recreate_Promotion_Branch__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__Promotion__c.cmcSf__Rollback_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__Promotion__c.cmcSf__Rolled_Back_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -414,6 +557,10 @@
         <object>copado__JobStep__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <tabSettings>
+        <tab>cmcSf__Promotion_Rollback</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
     <tabSettings>
         <tab>copado__JobExecution__c</tab>
         <visibility>Visible</visibility>

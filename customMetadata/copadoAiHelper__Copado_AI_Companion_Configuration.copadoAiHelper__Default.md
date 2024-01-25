@@ -11,6 +11,10 @@
         <value xsi:type="xsd:boolean">false</value>
     </values>
     <values>
+        <field>copadoAiHelper__CopadoGPT_backend_URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
         <field>copadoAiHelper__Max_Tokens__c</field>
         <value xsi:type="xsd:double">200.0</value>
     </values>

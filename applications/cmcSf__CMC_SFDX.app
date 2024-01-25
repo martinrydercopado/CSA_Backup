@@ -18,6 +18,15 @@
         <type>Flexipage</type>
         <pageOrSobjectType>copado__Artifact_Version__c</pageOrSobjectType>
     </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>cmcSf__DX_Snapshot_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>copado__Git_Backup__c</pageOrSobjectType>
+    </actionOverrides>
     <brand>
         <headerColor>#00C3EF</headerColor>
         <logo>copado__Copado_Logo_Symbol_Only_Blue</logo>
@@ -50,6 +59,9 @@
     <tabs>copado__StandardRecordStatus</tabs>
     <tabs>copado__License_Manager</tabs>
     <tabs>copado__Account_Summary</tabs>
+    <tabs>copado__Git_Backup__c</tabs>
+    <tabs>copado__ExtensionConfiguration__c</tabs>
+    <tabs>copado__Function__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>cmcSf__CMC_SFDX_UtilityBar</utilityBar>
 </CustomApplication>

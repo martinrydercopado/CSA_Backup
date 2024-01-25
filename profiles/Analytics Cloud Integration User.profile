@@ -331,6 +331,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__ActionTemplate</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__ActionTemplateTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__AddApexTestsAcceptanceCriteriaCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -347,7 +355,23 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__AddFileLinksOnPromotion</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__AddFileLinksOnPromotionTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__ApexTestInfo</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__ApexTestSuitesAndClasses</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__ApexTestSuitesAndClassesTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -356,6 +380,22 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__ApexTestsResultTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__ApexTestsUnifier</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__ApexTestsUnifierTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__ApiVersionValidationPackageTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__ApiVersionValidationPackageVersionTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -395,6 +435,22 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__CheckVlocityEnabled</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__CheckVlocityEnabledTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__CommitChanges</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__CommitChangesTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__CommitFunctionCallback</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -419,11 +475,27 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__ContentDocumentHelper</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__ContentDocumentLinksSelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__ContentVersion_t</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__ContentVersionsSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__CopadoNotification</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__CopadoNotificationSelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -439,6 +511,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__CreateCopadoNotificationPushTopic</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__CreateCopadoNotificationPushTopicTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__CreatePackageFlowTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -451,11 +531,51 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__CronCalculator</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__CustomHighlightPanelController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__CustomHighlightPanelCtrlTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataDeployFunctionCallback</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataDeployFunctionCallbackTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataFilter</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataTemplate</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataTemplateDetail</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataTemplateFilterController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataTemplateFilterControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataTemplatePayload</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DataTemplatesSelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -503,7 +623,15 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__DeploymentJobSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__DeploymentJobUpdate</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DeploymentJobUpdateTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -516,6 +644,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__DeploymentsSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__DescribeSObjectService</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -543,11 +675,23 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__EnvironmentsSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__EvaluateApexTestsCriteria</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__EvaluateApexTestsCriteriaTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__EventPayload</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__ExtensionConfiguration</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -579,6 +723,58 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__GetAllTestClassesFromOrg</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetAllTestClassesFromOrgTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetAllTestSuiteMembershipFromOrg</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetAllTestSuiteMembershipFromOrgTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetApexCodeCoverageFromOrg</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetDataTemplatePayload</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetDataTemplatePayloadTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetDxNamespace</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetDxNamespaceTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetGitJson</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetGitJsonTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetInstallationKeys</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetInstallationKeysTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__GetPackageVersionWithKeyFlowTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -607,11 +803,35 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__GetVlocityDependencies</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__GetVlocityDependenciesTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__HandleApexTestRecord</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__HandleApexTestRecordTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__HasVlocityChanges</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__HasVlocityChangesTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__HasVlocitySnapshotJobTemplate</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__HasVlocitySnapshotJobTemplateTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -631,11 +851,31 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__IdentifyProductionEnvironment</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__IdentifyProductionEnvironmentTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__ImportPackageAction</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__ImportPackageActionTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__ImportPackageAndVersionFlowTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__InitializeSFDXProject</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__InitializeSFDXProjectTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -648,6 +888,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__InstalledPackageCallbackTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__IsRollBackEnabled</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__IsRollBackEnabledTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -691,6 +939,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__JobStepDataDeployController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__JobStepDataDeployControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__JobStepsSelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -707,6 +963,18 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__LwcLabelsTranslation</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__LwcLabelsTranslationTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__LwcResponse</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__MetaDataItem</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -716,6 +984,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__MetadataApiResult</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__MetadataRefresh</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__MetadataRefreshTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -739,6 +1015,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__OperatorTypeCodes</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__PackageCreateHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -755,7 +1035,15 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__PackageNoNamespaceValidationTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__PackageVersionCreateAction</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__PackageVersionCreateActionTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -775,6 +1063,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__PackageVersionIdsTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__PackageVersionInstallationKeySelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -788,6 +1080,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__PackageVersionRecordCreationUpdatesTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__PackageVersionTagValidationTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -823,6 +1119,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__PipelineActionSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__PipelineConnection</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -840,6 +1140,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__PipelinesSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__PollCopadoNotification</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__PollCopadoNotificationTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -863,11 +1171,75 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__PromotionRollbackCtrl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__PromotionRollbackCtrlTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__PromotionsSelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__ProxyOrgResponse</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__PublishPackageVersionCallbackFlowTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__QualityGateRuleConditionsSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__QueryEditor</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__QueryEditorTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RecordMatchingFormula</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RecordMatchingFormulaSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshMetadataCallOutTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshMetadataCallback</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshMetadataCallbackTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshMetadataCallout</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshOrgMetadataCache</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshOrgMetadataCacheTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshVlocityCallback</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RefreshVlocityCallbackTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -887,7 +1259,19 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__Release</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__ReleasesSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RemoveValidationIdFromPromotion</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RemoveValidationIdFromPromotionTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -900,6 +1284,30 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__ResultsSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RollbackHeaderCtrl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RollbackHeaderCtrlTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RollbackImpl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RollbackImplTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RollbackTableContainerCtrl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__RollbackTableContainerCtrlTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -951,6 +1359,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__Snapshot</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__SourceMemberResult</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -959,11 +1371,23 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__SystemPropertiesSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__SystemProperty</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__TestDataFactory</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__TestUtilities</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__Test_t</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1003,6 +1427,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__UpdatePackageAction</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__UpdatePackageActionTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__UpdatePackageFlowTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1036,6 +1468,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>cmcSf__UpdatePackageVersionRequisiteFlowTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__UpdatePackageVersionRequiste</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__UpdatePackageVersionRequisteTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1099,6 +1539,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__UserStoryMetadataTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__UserStoryMetadataTrigger</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1107,7 +1551,39 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>cmcSf__UserStoryMetadata_t</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>cmcSf__Utilities</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VersionFormatValidationTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocityRefresh</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocityRefreshTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocitySettingsDestinationId</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocitySettingsDestinationIdTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocitySettingsSourceId</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>cmcSf__VlocitySettingsSourceIdTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1259,6 +1735,38 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copadoCrtRpa__ApiMock</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoCrtRpa__AutomationDetails</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoCrtRpa__AutomationDetailsTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoCrtRpa__AutomationResult</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoCrtRpa__AutomationResultTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoCrtRpa__JobPoller</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoCrtRpa__RunCrtAutomation</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoCrtRpa__RunCrtAutomationTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copadoQuality__AbstractTestData</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1280,6 +1788,26 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copadoQuality__ApplicationException</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__CchScanCallback</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__CchScanCallbackTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__ComplianceRuleTableCtrl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__ComplianceRuleTableCtrlTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__ComplianceRules</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1372,14 +1900,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copadoQuality__CrtTestDefinitionCtrlTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>copadoQuality__CrtTestsRunning</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>copadoQuality__CrtTestsRunningTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1491,11 +2011,11 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copadoQuality__GetJobContext</apexClass>
+        <apexClass>copadoQuality__GetExtensionConfigurationId</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copadoQuality__GetJobContextTest</apexClass>
+        <apexClass>copadoQuality__GetExtensionConfigurationIdTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1711,10 +2231,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copadoQuality__RunCrtTestsIntegrationTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copadoQuality__RunCrtTestsTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1811,11 +2327,27 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copadoQuality__UserStoryBundleCCHTestsUnifier</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__UserStoryBundleCCHTestsUnifierTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copadoQuality__UserStoryBundlePMDTestsUnifier</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>copadoQuality__UserStoryBundlePMDTestsUnifierTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__ValidateCCHEnabled</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__ValidateCCHEnabledTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -2227,23 +2759,11 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AuthorizationCheck</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__AuthorizationException</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>copado__AuthorizationUtils</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>copado__AuthorizationWithSharing</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>copado__AuthorizationWithoutSharing</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -2396,6 +2916,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__AutomationTemplateExportImportHelper</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__BackPromotionAutomationScopeCtrl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__BackPromotionAutomationScopeCtrlTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -2616,6 +3144,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__CheckCBMLicense</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__CheckCCHEnabled</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__CheckCCHEnabledTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -3811,6 +4347,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>copado__DynamicComponentWrapperCtrl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__DynamicComponentWrapperCtrlTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>copado__DynamicDatatableColumnsConfiguration</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -4060,6 +4604,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__ExternalCIJobsExtension</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__Feature</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -4483,10 +5031,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__IAuthorization</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__IDXOrgBehavior</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -4788,14 +5332,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__MCWebhookTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>copado__MC_MassBackPromoteBatch</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>copado__MC_MassBackPromoteBatchTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -5500,6 +6036,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__PromotionOtherInformation</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__PromotionRemoter</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__PromotionRemoterTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -6227,10 +6771,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SecureOperations</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__SeleniumGroupTriggersTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -6372,6 +6912,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__SetQgrcAcceptanceCriteria</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__SetSystemPropertySharing</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>copado__SetSystemPropertySharingTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -7268,10 +7816,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>copado__Test_ConnectionBehaviorTriggerHandler</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>copado__Test_CopadoAuthorization</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -11688,6 +12232,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Nov_Lead_Text__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.NumberOfEmployees</field>
         <readable>true</readable>
@@ -13114,6 +13663,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>copadoAiHelper__Copado_AI_Companion_Configuration__mdt.copadoAiHelper__CopadoGPT_backend_URL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>copadoAiHelper__Copado_AI_Companion_Prompt__mdt.copadoAiHelper__Active__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -13145,6 +13699,61 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>copadoAiHelper__Copado_AI_Companion_Prompt__mdt.copadoAiHelper__System_prompt_before__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule_Violation__c.copadoQuality__End_Column__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule_Violation__c.copadoQuality__End_Line__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule_Violation__c.copadoQuality__Message__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule_Violation__c.copadoQuality__Result__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule_Violation__c.copadoQuality__Start_Column__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule_Violation__c.copadoQuality__Start_Line__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule_Violation__c.copadoQuality__URI__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule__c.copadoQuality__Active__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule__c.copadoQuality__ConfigJSON__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule__c.copadoQuality__Risk_Detail__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copadoQuality__Compliance_Rule__c.copadoQuality__XPath_Expression__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13364,6 +13973,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>copado__Artifact_Version__c.cmcSf__Api_Version__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>copado__Artifact_Version__c.cmcSf__Code_Coverage__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -13494,7 +14108,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>copado__Artifact__c.cmcSf__Api_Version__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>copado__Artifact__c.cmcSf__IsOrgDependent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Artifact__c.cmcSf__PackagePath__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13650,6 +14274,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>copado__Automation_Rule__c.copado__Automation_Connector__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Automation_Rule__c.copado__Config_Json__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16569,12 +17198,32 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>copado__Promotion__c.cmcSf__Attach_Vlocity_Build_File__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>copado__Promotion__c.cmcSf__Debug_Mode__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>copado__Promotion__c.cmcSf__Last_Rollback_Execution_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>copado__Promotion__c.cmcSf__Recreate_Promotion_Branch__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Promotion__c.cmcSf__Rollback_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Promotion__c.cmcSf__Rolled_Back_Date__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16780,6 +17429,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>copado__Pull_Request__c.copado__Request_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__Pull_Request__c.copado__Requested_Reviewers_Long__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -18065,6 +18719,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>copado__System_Property__c.copado__Is_Global__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__System_Property__c.copado__Is_Public__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19827,6 +20486,9 @@
         <layout>ContractLineItem-Contract Line Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CspTrustedSite-Trusted URL Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Customer-Customer Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -20538,6 +21200,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>WorkStepTemplate</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>copadoQuality__Compliance_Rule_Violation__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
@@ -21352,6 +22023,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Travel_Approval__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>cmcSf__Promotion_Rollback</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>

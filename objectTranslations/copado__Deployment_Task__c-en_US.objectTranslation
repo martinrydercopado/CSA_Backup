@@ -94,6 +94,10 @@
             <translation><!-- Bulk Data --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>CRT Automation</masterLabel>
+            <translation><!-- CRT Automation --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Custom Settings</masterLabel>
             <translation><!-- Custom Settings --></translation>
         </picklistValues>

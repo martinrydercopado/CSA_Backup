@@ -56,7 +56,27 @@ private with sharing class OpenAIQuestionProcessorTest {
                 // Validate
                 Assert.isFalse(result.get('prompt').contains('{'), 'all the merges should have been removed, but result='+result);
             }
-
+            String s = JSON.serialize(new Map<String, Object>{
+                'name' => 'create_promotion',
+                'description' => 'Given a list of user story names, create a Promotion record, optionally promoting the user stories',
+                'examples' => new String[]{'create a promotion with the user stories'},
+                'parameters' => new Map<String, Object>{
+                    'type' => 'object',
+                    'properties' => new Map<String, Object>{
+                        'user_stories' => new Map<String, Object>{
+                            'type' => 'array',
+                            'uniqueItems' => true,
+                            'minItems' => 1,
+                            'items' => new Map<String, Object>{
+                                'type' => 'string',
+                                'minLength' => 5,
+                                'pattern' => 'US-0[0-9]+'
+                            },
+                            'description' => 'A list of user story names, in the format US-<number>'
+                        }
+                    }
+                }
+            });
             // Exercise: result
             {
                 copado__Result__c record = new copado__Result__c(copado__Job_Type__c = 'Manual Tests');

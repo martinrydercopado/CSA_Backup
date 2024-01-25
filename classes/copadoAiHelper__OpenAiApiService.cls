@@ -18,56 +18,22 @@ public with sharing class OpenAiApiService {
     }
 
     @AuraEnabled
-    public static OpenAiWrapper sendRequest(String body) {
-
-        // NOTE: we parse the body to reprocess the request and enforce the org defaults to maintain compatibility
-        Map<String, Object> bodyMap = (Map<String, Object>)JSON.deserializeUntyped(body);
-
-        Copado_AI_Companion_Configuration__mdt conf = getConfig();
-        if(conf.Max_Tokens__c>0) {
-            bodyMap.put('max_tokens', Integer.valueOf(conf.Max_Tokens__c));
-        }
-        bodyMap.put('temperature', conf.OpenAI_Temperature__c);
-        String model = String.isEmpty(conf.OpenAI_Model__c) ?'' : conf.OpenAI_Model__c;
-        bodyMap.put('model', model.replace('copado-', ''));
-        body = JSON.serialize(bodyMap);
-        System.debug(conf.OpenAI_Model__c);
+    public static String getAuthToken(String body) {
+        // NOTE: unit-test mocks do not reach managed packages, so we need to rely on a Test.isRunningTest()
         HttpResponse res;
-        try{
-            if(model.startsWith('copado-')) {
-                res = copado.ApiProxy.callAI(body);
-            }else{
-                // Use the external OpenAI account
-                HttpRequest req = new HttpRequest();
-                req.setEndpoint('callout:.__OpenAI/v1/chat/completions');
-                req.setHeader('Content-Type', 'application/json');
-                req.setMethod('POST');
-                req.setBody(body);
-                req.setTimeout(110000);
-                Http http = new Http();
-                res = http.send(req);
-            }
-        }catch(Exception e) {
-            System.debug(LoggingLevel.ERROR, 'Error: ' + e.getLineNumber()+' '+ e);
+        if(Test.isRunningTest()) {
             res = new HttpResponse();
-            res.setBody(e.getMessage());
-            res.setStatus('Server Error');
-            res.setStatusCode(500);
-        } 
-
-        OpenAiWrapper lwcResponse = new OpenAiWrapper();
-        lwcResponse.isSuccess = false;
-        lwcResponse.statusCode = res.getStatusCode();
-        lwcResponse.status = res.getStatus();
-        if (res.getStatusCode() == 200) {
-            lwcResponse.isSuccess = true;
-            lwcResponse.message = '';
-            lwcResponse.response = res.getBody();
-        } else {
-            lwcResponse.isSuccess = false;
-            lwcResponse.message = 'Could not contact the API. Details: ' + res.getStatus() + ' ' + res.getBody();
+            res.setStatusCode(200);
+            res.setBody('{"auth_token": "yyy"}');
+        }else{
+            res = copado.ApiProxy.getAISession('{}');
         }
-        return lwcResponse;
+        if (res.getStatusCode() == 200) {
+            Map<String, Object> resp = (Map<String, Object>)JSON.deserializeUntyped(res.getBody());
+            return (String)resp.get('auth_token');
+        } else {
+            throw new CalloutException('Could not contact the API. Details: ' + res.getStatus() + ' ' + res.getBody());
+        }
     }
 
     public static Copado_AI_Companion_Configuration__mdt getConfig() {

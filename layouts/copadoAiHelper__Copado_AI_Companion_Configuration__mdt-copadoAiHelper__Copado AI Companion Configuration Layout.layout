@@ -26,6 +26,10 @@
                 <behavior>Required</behavior>
                 <field>copadoAiHelper__Max_Tokens__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>copadoAiHelper__CopadoGPT_backend_URL__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -27,18 +27,30 @@
         <name>Conversation_Screen</name>
         <label>Conversation Screen</label>
         <locationX>176</locationX>
-        <locationY>158</locationY>
+        <locationY>134</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
-            <name>copado_devops_ai_companion</name>
-            <extensionName>copadoAiHelper:copado_devops_ai_companion</extensionName>
+            <name>aiCompanionStreaming</name>
+            <extensionName>copadoAiHelper:aiCompanionStreaming</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
                 <name>contextId</name>
                 <value>
                     <elementReference>recordId</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>preselectedPromptName</name>
+                <value>
+                    <elementReference>preselectedPromptName</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>hideFullScreen</name>
+                <value>
+                    <elementReference>hideFullScreen</elementReference>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -56,6 +68,23 @@
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <name>hideFullScreen</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>preselectedPromptName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <description>generic input record id</description>
         <name>recordId</name>

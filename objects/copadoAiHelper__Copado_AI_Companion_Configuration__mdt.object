@@ -28,6 +28,17 @@ Contact</description>
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>copadoAiHelper__CopadoGPT_backend_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>By default, if this is empty, AI Companion will use the url of the named credential &quot;mc-backend&quot; (API Name mc_backend). You can set this field if a different URL is needed for your installation</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>By default, if this is empty, AI Companion will use the url of the named credential &quot;mc-backend&quot; (API Name mc_backend). You can set this field if a different URL is needed for your installation</inlineHelpText>
+        <label>CopadoGPT backend URL</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
         <fullName>copadoAiHelper__Max_Tokens__c</fullName>
         <defaultValue>200</defaultValue>
         <deprecated>false</deprecated>

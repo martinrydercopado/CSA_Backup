@@ -4,7 +4,7 @@
     <protected>false</protected>
     <values>
         <field>copado__Automate_Test_Readiness__c</field>
-        <value xsi:type="xsd:boolean">false</value>
+        <value xsi:type="xsd:boolean">true</value>
     </values>
     <values>
         <field>copado__JobTemplate__c</field>
@@ -20,6 +20,6 @@
     </values>
     <values>
         <field>copado__UserStoryBundleTestsUnifierLogic__c</field>
-        <value xsi:nil="true"/>
+        <value xsi:type="xsd:string">cmcSf.ApexTestsUnifier</value>
     </values>
 </CustomMetadata>

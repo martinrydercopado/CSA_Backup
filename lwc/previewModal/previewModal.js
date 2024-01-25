@@ -1,3 +1,4 @@
+/*
 import { api } from 'lwc';
 import LightningModal from 'lightning/modal';
 import callOpenAiApi from '@salesforce/apex/OpenAiApiService.sendRequest';
@@ -238,3 +239,4 @@ export default class PreviewModal extends LightningModal {
         }
     }
 }
+*/

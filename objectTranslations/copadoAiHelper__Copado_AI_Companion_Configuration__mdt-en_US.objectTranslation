@@ -11,6 +11,11 @@
         <name>copadoAiHelper__Allows_Functions__c</name>
     </fields>
     <fields>
+        <help><!-- By default, if this is empty, AI Companion will use the url of the named credential &quot;mc-backend&quot; (API Name mc_backend). You can set this field if a different URL is needed for your installation --></help>
+        <label><!-- CopadoGPT backend URL --></label>
+        <name>copadoAiHelper__CopadoGPT_backend_URL__c</name>
+    </fields>
+    <fields>
         <label><!-- Max Tokens --></label>
         <name>copadoAiHelper__Max_Tokens__c</name>
     </fields>

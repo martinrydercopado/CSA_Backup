@@ -423,6 +423,11 @@
                     <label>Function</label>
                 </value>
                 <value>
+                    <fullName>Test</fullName>
+                    <default>false</default>
+                    <label>CRT Automation</label>
+                </value>
+                <value>
                     <fullName>Custom Setting</fullName>
                     <default>false</default>
                     <isActive>false</isActive>

@@ -14,7 +14,7 @@
         <name>copado__CreditSyncStatus__c</name>
     </fields>
     <fields>
-        <help><!-- How many copado credits this process used. --></help>
+        <help>関数の実行に使用されるコパードクレジット</help>
         <label><!-- Copado Credits Used --></label>
         <name>copado__Custom_Function_Used_Credits__c</name>
     </fields>
@@ -43,12 +43,12 @@
         <name>copado__End_Time__c</name>
     </fields>
     <fields>
-        <help><!-- Only displays when there&apos;s an error. It shows the error code to identify the issue quickly. --></help>
+        <help>問題の特定に役立つコード</help>
         <label><!-- Error Code --></label>
         <name>copado__Error_Code__c</name>
     </fields>
     <fields>
-        <help><!-- Only displays when there&apos;s an error. It is used to inform the user about what failed during the execution of the associated process. --></help>
+        <help>ジョブが失敗した場合のエラーの説明</help>
         <label><!-- Error Message --></label>
         <name>copado__Error_Message__c</name>
     </fields>
@@ -79,13 +79,13 @@
         <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- When this result is the outcome of a Job Step, that is executed as part of a Job Template, this fields points to the Job Step. (note that Job Step and Function can be populated at the same time) --></help>
+        <help>この結果がジョブテンプレートの一部として実行されるジョブステップの結果である場合、このフィールドはジョブステップを指します。(ジョブステップと関数は同時に入力することができます。）</help>
         <label><!-- Job Step --></label>
         <name>copado__JobStep__c</name>
         <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Record link shortcutting to Job Step&apos;s Job Execution --></help>
+        <help>ジョブステップのジョブ実行へのショートカットの記録リンク</help>
         <label><!-- Job Execution --></label>
         <name>copado__Job_Execution__c</name>
     </fields>
@@ -95,7 +95,7 @@
         <name>copado__Job_Id__c</name>
     </fields>
     <fields>
-        <help><!-- API name of the parent Job. Used for reporting purposes mainly. --></help>
+        <help>結果をトリガーしたジョブのAPI名。この情報はレポート作成に利用できます。</help>
         <label><!-- Job API Name --></label>
         <name>copado__Job_Type__c</name>
         <picklistValues>
@@ -109,7 +109,7 @@
         <name>copado__Link__c</name>
     </fields>
     <fields>
-        <help><!-- 15-digit ID of the record that triggered the process that generated the result. (e.g. A Job Step) We use a text field because Salesforce only allows one type in lookup fields. --></help>
+        <help>結果を生成したプロセスのトリガーとなったレコードの15桁のID。</help>
         <label><!-- Context ID --></label>
         <name>copado__ParentId__c</name>
     </fields>
@@ -129,7 +129,7 @@
         <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Includes all the returned data by the process. This can be used by other processes. --></help>
+        <help>プロセスによって返されたすべてのデータを含む。これは他のプロセスで使用できます。</help>
         <label><!-- Result Data --></label>
         <name>copado__Result_Data__c</name>
     </fields>
@@ -164,13 +164,13 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Test Parent object that trigger the execution. --></help>
+        <help>実行をトリガーしたテストの親オブジェクト。</help>
         <label><!-- Test --></label>
         <name>copado__Test__c</name>
         <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Upper limit of allocated execution time. If the process takes longer than this, it will be automatically terminated. --></help>
+        <help>一定時間 (たとえば 60 分) 経過しても関数のジョブからの応答がない場合に、 コパードにステータスを”失敗（Failed）”に更新させたい場合は、 ここで定義します。</help>
         <label><!-- Timeout (minutes) --></label>
         <name>copado__Timeout__c</name>
     </fields>

@@ -17,6 +17,11 @@
         <name>cmcSf__Ancestor_Version__c</name>
     </fields>
     <fields>
+        <help><!-- The api version to be used for the packaging CLI commands. If this is not specified, the Api Version value from the parent Package will be used. If neither has been specified, the default value, i.e. the api version of the Dev Hub, will be used. Specify in the format, e.g. 54.0. --></help>
+        <label><!-- Api Version --></label>
+        <name>cmcSf__Api_Version__c</name>
+    </fields>
+    <fields>
         <help><!-- Calculate and store the code coverage percentage by running the Apex tests included in this package version. --></help>
         <label><!-- Code Coverage --></label>
         <name>cmcSf__Code_Coverage__c</name>
@@ -170,6 +175,18 @@
         <label><!-- View In Git --></label>
         <name>copado__View_In_Git__c</name>
     </fields>
+    <validationRules>
+        <errorMessage><!-- The API version specified is not valid. It must be in the format, Number.0 --></errorMessage>
+        <name>cmcSf__Api_Version_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Package version number specified is not valid. It must be in the format,  {whole number}.{whole number}.{whole number}.{whole number} or {whole number}.{whole number}.{whole number}.NEXT --></errorMessage>
+        <name>cmcSf__Package_Version_Number_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Tag field is used to create a Git tag during package version creation. Ensure there are no spaces or character sequences that are not allowed for the Git tag. For more details, review the Git documentation https://git-scm.com/docs/git-check-ref-format --></errorMessage>
+        <name>cmcSf__Tag_Restriction</name>
+    </validationRules>
     <webLinks>
         <label><!-- Merge_Version --></label>
         <name>copado__Merge_Version</name>

@@ -98,6 +98,10 @@
             <translation>バルクデータ</translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>CRT Automation</masterLabel>
+            <translation><!-- CRT Automation --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Custom Settings</masterLabel>
             <translation>カスタム設定</translation>
         </picklistValues>
@@ -115,7 +119,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Function</masterLabel>
-            <translation><!-- Function --></translation>
+            <translation>関数</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Manual Task</masterLabel>

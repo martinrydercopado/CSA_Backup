@@ -8,7 +8,12 @@ public with sharing class OpenAIQuestionProcessor {
 
         // for security reasons we only support copado objects or specified ones
         // otherwise end user could expose account, contact, lead, user, ...
+        // but we do support SOQL/SOSL in prompts, of any object
         if(!isAllowedObject(conf, sobjectName)) {
+            question.prompt = processSOQLParams(contextId, question.prompt);
+            question.before = processSOQLParams(contextId, question.before);
+            question.prompt = processSOSLParams(contextId, question.prompt);
+            question.before = processSOSLParams(contextId, question.before);
             return question.serialize();
         }
 
@@ -37,6 +42,28 @@ public with sharing class OpenAIQuestionProcessor {
         Map<String, Object> resp = new Map<String, Object>{'objectLabel'=> '...', 'prompts'=> new String[]{} };
         Copado_AI_Companion_Configuration__mdt conf = OpenAiApiService.getConfig();
 
+        String url = 'https://na.api.copado.com';
+        if(String.isNotEmpty(conf.CopadoGPT_backend_URL__c) && conf.CopadoGPT_backend_URL__c.startsWith('https')) {
+            url = conf.CopadoGPT_backend_URL__c;
+        }else{
+            // we cannot know if THIS credential is the actual one in use because
+            // it can be overriden with a protected custom setting
+            // but we cannot query the PCS, so if it was overriden, the alternative is to set the url in the 
+            // Copado_AI_Companion_Configuration__mdt OpenAI_Model__c field
+            NamedCredential[] ncs = [SELECT Endpoint FROM NamedCredential WHERE DeveloperName='mc_backend'];
+            for(NamedCredential nc : ncs) {
+                url = nc.Endpoint + '/copadoai/aicompanion/stream';
+            }
+        }
+        resp.put('backendUrl', url);
+
+        User u = [SELECT LanguageLocaleKey FROM User WHERE Id = :UserInfo.getUserId() ];
+        resp.put('userId', UserInfo.getUserId());
+        resp.put('orgId', UserInfo.getOrganizationId());
+        resp.put('userName', UserInfo.getName());
+        resp.put('languageLocaleKey', u.LanguageLocaleKey);
+        resp.put('namespace', OpenAIQuestionProcessor.class.getName().contains('.') ? OpenAIQuestionProcessor.class.getName().substringBefore('.') : '' );
+
         // for security reasons we only support copado objects or specified ones
         // otherwise end user could expose account, contact, lead, user, ...
         if(String.isNotEmpty(sobjectName) && !isAllowedObject(conf, sobjectName)) {
@@ -45,7 +72,7 @@ public with sharing class OpenAIQuestionProcessor {
 
         String sobjectNameLike = sobjectName.replace('copado__','').replace('__c','');
         String langLike = UserInfo.getLanguage().replace('_.*', '');
-        Copado_AI_Companion_Prompt__mdt[] prompts = [SELECT Label, Language__c, Order__c, 
+        Copado_AI_Companion_Prompt__mdt[] prompts = [SELECT DeveloperName, Label, Language__c, Order__c, 
             Object__c, Prompt__c, System_prompt_before__c FROM Copado_AI_Companion_Prompt__mdt 
             WHERE Active__c=true 
                 AND (Object__c = :sobjectNameLike OR Object__c = '*') 
@@ -68,8 +95,13 @@ public with sharing class OpenAIQuestionProcessor {
         List<Map<String,Object>> questions = new List<Map<String,Object>>();
         for(Copado_AI_Companion_Prompt__mdt p : prompts) {
             if(p.Language__c == language) {
-                questions.add(new Map<String,Object>{'label'=>p.Label, 'prompt'=>p.Prompt__c, 
-                'before'=>p.System_prompt_before__c, 'after'=>''});
+                questions.add(new Map<String,Object>{
+                    'name' => p.DeveloperName, 
+                    'label' => p.Label, 
+                    'prompt' => p.Prompt__c, 
+                    'before' => p.System_prompt_before__c, 
+                    'after' => ''
+                });
             }
         }
 
@@ -133,6 +165,7 @@ public with sharing class OpenAIQuestionProcessor {
         Boolean isClassic;
 
         copado__Promotion__c promotion = [SELECT copado__Status__c, copado__Platform__c,
+            copado__Last_Deployment_Execution_Id__c,
             (SELECT Title, Body FROM Notes ORDER By CreatedDate DESC LIMIT 1), 
             (SELECT Id FROM copado__Deployments__r ORDER BY CreatedDate DESC LIMIT 1),
             (SELECT copado__User_Story__r.Name, copado__User_Story__r.copado__User_Story_Title__c , 
@@ -142,7 +175,7 @@ public with sharing class OpenAIQuestionProcessor {
                 FROM copado__Promoted_User_Stories__r ORDER BY Name DESC LIMIT 80)
             FROM copado__Promotion__c WHERE Id = :promotionId WITH SECURITY_ENFORCED LIMIT 1];
 
-            isClassic = String.isEmpty(promotion.copado__Platform__c) || promotion.copado__Platform__c=='Salesforce';
+        isClassic = String.isEmpty(promotion.copado__Platform__c) || promotion.copado__Platform__c=='Salesforce';
         lastDeploymentId = promotion.copado__Deployments__r.size() >0 ? promotion.copado__Deployments__r[0].Id : null;
 
         // check if the US is 1stgen or 2ndgen based on copado__Platform__c
@@ -150,6 +183,13 @@ public with sharing class OpenAIQuestionProcessor {
             logs = promotion.Notes.size()>0 ? promotion.Notes[0].Body : null;
             // TODO: check the SIZE of the file, to avoid memory errors, and also chatgpt limits (?)
             deploymentErrors = [SELECT Body FROM Attachment WHERE ParentId = :lastDeploymentId AND Name LIKE 'ERRORs%.txt' ORDER BY CreatedDate DESC LIMIT 1]?.Body?.toString();
+        }else{
+            copado__JobExecution__c[] jobs = [SELECT copado__ErrorMessage__c FROM copado__JobExecution__c WHERE Id = :promotion.copado__Last_Deployment_Execution_Id__c ORDER BY CreatedDate DESC LIMIT 1];
+            System.debug(promotion);
+            System.debug(jobs);
+            if(!jobs.isEmpty()) {
+                deploymentErrors = jobs[0].copado__ErrorMessage__c;
+            }
         }
 
         Map<String, String> params = new Map<String, String>{
@@ -331,6 +371,9 @@ public with sharing class OpenAIQuestionProcessor {
         question.prompt = processSOQLParams(contextId, question.prompt);
         question.before = processSOQLParams(contextId, question.before);
 
+        question.prompt = processSOSLParams(contextId, question.prompt);
+        question.before = processSOSLParams(contextId, question.before);
+
         return question;
     }
 
@@ -400,6 +443,32 @@ public with sharing class OpenAIQuestionProcessor {
                 jsonResult = 'There was an error querying the data, please notify the user of this error: '+ex;
             }
             question = question.replace('{SELECT '+soql+'}', jsonResult);
+        }
+        return question;
+    }
+
+    public static String processSOSLParams(Id contextId, String question) {
+        Pattern pat = Pattern.compile('(?ims)\\{FIND *(\'.+)}');
+        Matcher mat = pat.matcher(question);
+        while(mat.find()) {
+            String sosl = mat.group(1);
+            if(String.isempty(sosl)) {
+                break;
+            }
+            System.debug('context/sosl: '+contextId+' '+sosl);
+            String jsonResult = '';
+            try{
+                String query = 'FIND '+sosl.replace(':contextId', String.escapeSingleQuotes(contextId==null? '' :contextId));
+                System.debug(query);
+                List<List<SObject>> s = Search.query(query, AccessLevel.USER_MODE);
+                jsonResult = JSON.serialize(s);
+                // attempt to reduce the number of tokens
+                jsonResult = jsonResult.replaceAll('"attributes":\\{.*?\\},?', '');
+            }catch(Exception ex) {
+                System.debug('error querying sobject '+ex);
+                jsonResult = 'There was an error querying the data, please notify the user of this error: '+ex;
+            }
+            question = question.replace('{FIND '+sosl+'}', jsonResult);
         }
         return question;
     }
