@@ -125,6 +125,7 @@
             <useReportChart>true</useReportChart>
         </components>
     </middleSection>
+    <owner>maryder@gmail.com.csaorg</owner>
     <rightSection>
         <columnSize>Medium</columnSize>
         <components>

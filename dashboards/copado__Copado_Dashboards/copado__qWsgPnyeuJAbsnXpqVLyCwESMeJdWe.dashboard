@@ -237,6 +237,7 @@
     <dashboardType>SpecifiedUser</dashboardType>
     <description>Dashboard to view the different tests with their progress, status and much more.</description>
     <isGridLayout>true</isGridLayout>
+    <owner>maryder@gmail.com.csaorg</owner>
     <runningUser>maryder@gmail.com.csaorg</runningUser>
     <textColor>#000000</textColor>
     <title>Test Management Dashboard</title>

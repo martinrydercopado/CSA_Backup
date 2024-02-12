@@ -59,6 +59,7 @@
             <sortBy>RowLabelAscending</sortBy>
         </components>
     </middleSection>
+    <owner>maryder@gmail.com.csaorg</owner>
     <rightSection>
         <columnSize>Medium</columnSize>
         <components>

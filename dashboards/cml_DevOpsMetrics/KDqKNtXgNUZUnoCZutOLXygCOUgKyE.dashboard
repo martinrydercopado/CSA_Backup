@@ -185,6 +185,7 @@
     <dashboardType>SpecifiedUser</dashboardType>
     <description>Key metrics for tracking performance of DevOps</description>
     <isGridLayout>true</isGridLayout>
+    <owner>maryder@gmail.com.csaorg</owner>
     <runningUser>maryder@gmail.com.csaorg</runningUser>
     <textColor>#000000</textColor>
     <title>DevOps Management Dashboard</title>
