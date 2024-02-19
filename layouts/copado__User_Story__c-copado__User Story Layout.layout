@@ -579,7 +579,6 @@
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>copado__State__c</fields>
         <fields>copado__Changed_Files__c</fields>
