@@ -11,6 +11,7 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>User Access &amp; Permissions Assistant</label>
     <navType>Standard</navType>
     <tabs>Profile2PermSet__Permissions_Analyzer</tabs>
