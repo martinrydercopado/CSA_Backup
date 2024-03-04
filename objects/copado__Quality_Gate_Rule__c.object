@@ -197,7 +197,6 @@ IF(INCLUDES(copado__Actions__c , &quot;PackageDistribution&quot; ), &quot;Packag
             <valueSettings>
                 <controllingFieldValue>Before</controllingFieldValue>
                 <controllingFieldValue>After</controllingFieldValue>
-                <controllingFieldValue>When branch is ready</controllingFieldValue>
                 <valueName>Promotion</valueName>
             </valueSettings>
             <valueSettings>
@@ -208,7 +207,6 @@ IF(INCLUDES(copado__Actions__c , &quot;PackageDistribution&quot; ), &quot;Packag
             <valueSettings>
                 <controllingFieldValue>Before</controllingFieldValue>
                 <controllingFieldValue>After</controllingFieldValue>
-                <controllingFieldValue>When branch is ready</controllingFieldValue>
                 <valueName>Commit</valueName>
             </valueSettings>
             <valueSettings>
@@ -251,11 +249,6 @@ IF(INCLUDES(copado__Actions__c , &quot;PackageDistribution&quot; ), &quot;Packag
                     <fullName>After</fullName>
                     <default>false</default>
                     <label>After</label>
-                </value>
-                <value>
-                    <fullName>When branch is ready</fullName>
-                    <default>false</default>
-                    <label>When branch is ready</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

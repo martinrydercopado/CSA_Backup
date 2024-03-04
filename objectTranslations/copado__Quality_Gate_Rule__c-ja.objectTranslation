@@ -25,10 +25,6 @@
             <masterLabel>Before</masterLabel>
             <translation>ビフォアー</translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>When branch is ready</masterLabel>
-            <translation>ブランチ準備完了時</translation>
-        </picklistValues>
     </fields>
     <fields>
         <label><!-- Status --></label>

@@ -143,6 +143,11 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Functional Review --></label>
+        <name>copadoQuality__Functional_Review__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
         <picklistValues>

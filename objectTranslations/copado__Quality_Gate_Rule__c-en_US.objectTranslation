@@ -21,10 +21,6 @@
             <masterLabel>Before</masterLabel>
             <translation><!-- Before --></translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>When branch is ready</masterLabel>
-            <translation><!-- When branch is ready --></translation>
-        </picklistValues>
     </fields>
     <fields>
         <label><!-- Status --></label>
